@@ -7,6 +7,7 @@ def execute_command(s):
             itemsdic = {}
             itemsdic = f.read()
             print(itemsdic)
+            print("test")
 
     elif s == 'show items':
         with open('./list_of_items.txt', 'r') as f:
