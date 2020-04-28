@@ -1,1 +1,2 @@
-tomato 60
+tomato : 60
+door : 1

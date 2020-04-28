@@ -5,9 +5,9 @@ def execute_command(s):
     if s == 'load':
         with open('./sales.txt', 'r') as f:
             itemsdic = {}
-            itemsdic = f.read()
-            print(itemsdic)
-            print("test")
+            for line in f:
+                values = line.split()
+                print (values)
 
     elif s == 'show items':
         with open('./list_of_items.txt', 'r') as f:
@@ -18,8 +18,8 @@ def execute_command(s):
     elif s == 'sell':
         with open('./sales.txt', 'a') as f:
             item = str(input('Please enter sold item name'))
-            ammount_sold = str(input('Please enter num of pieces sold'))
-            f.write('{} {}'.format(item, ammount_sold))
+            amount_sold = str(input('Please enter num of pieces sold'))
+            f.write(item + ' : ' + amount_sold + "\n")
             print('Item added successfully')
     elif s == 'add':
         with open('./list_of_items.txt', 'a') as f:
